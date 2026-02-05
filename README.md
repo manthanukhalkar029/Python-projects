@@ -1,14 +1,8 @@
-• # Expense Tracker (Python)
-• 
-• A simple Python-based expense tracker to record and manage daily expenses.
+# My Python Projects 🚀
 
-## Features
-- Add expenses
-- View expense history
-- Total expense calculation
+This repository contains all my Python practice projects.
 
-## Tech Used
-- Python
+## 📁 Project List
 
-## How to Run
-python main.py
+### Project 1 – Expense Tracker
+A simple Python program to track daily expenses.
