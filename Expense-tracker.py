@@ -1,14 +1,17 @@
 # Expense Tracker Project 
 
 Expense_List = []
+Income_List = []
 print('Welcome to Personal ExpenseTracker')
 
 while True:
-    print("===MENU===")
-    print("1. ADD Expenses:")
+    print(" ===MENU=== ")
+    print("1. ADD Expense:")
     print("2. View all Expenses:")
-    print("3. Total Spendings: ")
-    print("4.--Exit--")
+    print("3. Total Spending:")
+    print("4. ADD Income:")
+    print("5. Total Earning:")
+    print("6.----Exit---- \n")
     Choice = int(input("Enter your Choice:"))
     print()
 
@@ -29,8 +32,8 @@ while True:
             "type": Amount_type,
         }
         Expense_List.append(each_expense)
-        print("Expense Added Successfully!!!")
-        print()
+        print("Expense Added Successfully!!! \n")
+        
 
 
 #VIEW Expense:
@@ -54,9 +57,35 @@ while True:
         print("Your total Spendings are of Rupees:",total)
         print()
 
+#ADD Income:
+    elif(Choice==4):
+        print("ADD your Income:")
+        Date = input("Enter date:")
+        Category = input("Enter Category:")
+        Description = input("Enter Des.:")
+        Amount = float(input("Enter amount:"))
+        
+        each_income={
+            "date": Date,
+            "category": Category,
+            "description": Description,
+            "amount": Amount,
+            
+        }
+        Income_List.append(each_income)
+        print("Income Added Successfully!!! \n")
+        
+
+#Total Earning:
+    elif(Choice==5):
+        total =0
+        for i in Income_List:
+            total+= i["amount"]
+        print("Your Total Earnings are of Rupees:",total)
+        print()
 
 #Exit
-    elif(Choice==4):
+    elif(Choice==6):
         print("Thanks For Visiting!!!")
         break
         print()
