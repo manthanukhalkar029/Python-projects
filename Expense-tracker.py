@@ -10,8 +10,9 @@ while True:
     print("2. View all Expenses:")
     print("3. Total Spending:")
     print("4. ADD Income:")
-    print("5. Total Earning:")
-    print("6.----Exit---- \n")
+    print("5. View all Incomes:")
+    print("6. Total Earning:")
+    print("7.----Exit---- \n")
     Choice = int(input("Enter your Choice:"))
     print()
 
@@ -75,9 +76,21 @@ while True:
         Income_List.append(each_income)
         print("Income Added Successfully!!! \n")
         
+#VIEW Income:
+    elif(Choice==5):
+        if(len(Income_List)==0):
+                print("Please Add your Incomes!!!")
+        else:   
+            count =1
+            print("---Your Incomes---") 
+            for i in Income_List:
+                print(f'Income No.{count} ->',i)
+                count+=1
+        print()
+
 
 #Total Earning:
-    elif(Choice==5):
+    elif(Choice==6):
         total =0
         for i in Income_List:
             total+= i["amount"]
@@ -85,7 +98,7 @@ while True:
         print()
 
 #Exit
-    elif(Choice==6):
+    elif(Choice==7):
         print("Thanks For Visiting!!!")
         break
         print()
